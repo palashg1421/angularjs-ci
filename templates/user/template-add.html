@@ -1,0 +1,63 @@
+<div class="row ng-body" ng-controller="userController">
+    <div class="col-sm-6 offset-sm-3">
+
+        <form name="addUserForm" ng-submit="addUser(addUserForm.$valid)" novalidate>
+            <div class="form-group">
+                <label for="user_name">Name:</label>
+                <input
+                    type="text"
+                    id="user_name"
+                    name="user_name"
+                    class="form-control"
+                    placeholder="Full name"
+                    ng-model="user_name"
+                    ng-required="true"
+                />
+                <div class="error" ng-show='addUserForm.user_name.$touched && addUserForm.user_name.$error.required'>
+                    First Name is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="user_phone">Phone:</label>
+                <input
+                    type="text"
+                    id="user_phone"
+                    name="user_phone"
+                    class="form-control"
+                    placeholder="Phone number"
+                    ng-model="user_phone"
+                    ng-required="true"
+                    ng-minlength="10"
+                    ng-maxlength="10"
+                    ng-pattern="/^[0-9]*$/"
+                />
+                <span class="error" ng-show='addUserForm.user_phone.$touched && addUserForm.user_phone.$error.required'>
+                    Phone Number is required
+                </span>
+                <div class="error" ng-show='addUserForm.user_phone.$touched && addUserForm.user_phone.$error.pattern'>
+                    Must be a number only
+                </div>
+                <div class="error" ng-show='addUserForm.user_phone.$touched && addUserForm.user_phone.$valid.pattern && (addUserForm.user_phone.$error.minlength || addUserForm.user_phone.$error.maxlength)'>
+                    Must be only 10 digit long
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="user_email">Email:</label>
+                <input
+                    type="email"
+                    id="user_email"
+                    name="user_email"
+                    class="form-control"
+                    placeholder="Email address"
+                    ng-model="user_email"
+                    ng-required="true"
+                />
+                <span class="error" ng-show='addUserForm.user_email.$touched && addUserForm.user_email.$error.required'>
+                    Email address is required
+                </span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" ng-disabled="addUserForm.$invalid">Add</button>
+        </form>
+
+    </div>
+</div>

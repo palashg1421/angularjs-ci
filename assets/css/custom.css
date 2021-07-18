@@ -1,0 +1,63 @@
+.login-section {
+    background-color: #dfdfdf;
+    padding: 20px;
+    border: solid 1px gray;
+    margin-top: 50%;
+}
+.error{
+    color: #a80303;
+    font-size: 12px;
+}
+ul.navbar-nav li a {
+    cursor: pointer;
+}
+.ng-body {
+    margin: 0;
+    background-color: #f8f9fa;
+    padding: 20px 10px;
+}
+.ng-body .col-sm-9 {
+    border-left: dotted 1px grey;
+}
+.form-control, .btn {
+    border-radius: 0;
+}
+.navbar {
+    border-bottom: solid 1px darkgray;
+}
+#userTable thead tr th{
+    cursor: pointer;
+}
+#userTable thead tr th:last-child{
+    cursor: auto;
+    text-align: center;
+}
+#userTable tbody tr td:last-child{
+    text-align: center;
+}
+#userTable thead tr th .sort-icn{
+    font-size: 12px;
+    color: #b9b9b9;
+}
+#userTable thead tr th .sort-icn.active{
+    font-size: 12px;
+    color:#000; 
+}
+a:hover {
+    text-decoration: none;
+}
+a{
+    color: inherit;
+}
+#icn-delete {
+    padding-left: 20px;
+}
+#searchForm .btn-group{
+    width: 100%;
+}
+#icn-delete i {
+    color: crimson;
+}
+.alert {
+    border-radius: 0;
+}

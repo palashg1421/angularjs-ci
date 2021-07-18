@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-sm-6 offset-sm-3">
+        <section class="login-section" ng-controller="authController">
+
+            <form name='loginForm' ng-submit="login(loginForm.$valid)" novalidate>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input
+                        type="text"
+                        id="email"
+                        name='email'
+                        class="form-control"
+                        placeholder="admin@mailinator.com"
+                        ng-model="email"
+                        ng-required="true"
+                    />
+                    <span class="error" ng-show='loginForm.email.$touched && loginForm.email.$error.required'>
+                        Email is required
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="test123"
+                        ng-model="password"
+                        ng-required="true"
+                    />
+                    <span class="error" ng-show='loginForm.password.$touched && loginForm.password.$error.required'>
+                        Password is required
+                    </span>
+                </div>
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-block"
+                    ng-disabled="loginForm.$invalid"
+                >
+                    Login
+                </button>
+            </form>
+
+        </section>
+    </div>
+</div>

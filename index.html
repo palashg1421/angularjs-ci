@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Angular</title>
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/build/build.min.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div ui-view='nav'></div>
+            <div ui-view='content'></div>
+            <div class="preloader" data-loading></div>
+            <toaster-container></toaster-container>
+        </div>
+        <script src="assets/build/build.min.js"></script>
+    </body>
+</html>
